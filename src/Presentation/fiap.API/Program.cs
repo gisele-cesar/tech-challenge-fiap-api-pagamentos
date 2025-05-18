@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using fiap.Application;
-using fiap.Repositories;
+//using fiap.Repositories;
 using fiap.Services;
 using Serilog;
 
@@ -37,7 +37,7 @@ builder.Services.AddApplicationModule();
 builder.Services.AddServicesModule();
 
 
-builder.Services.AddRepositoriesModule();
+//builder.Services.AddRepositoriesModule();
 var app = builder.Build();
 
 app.UseSwagger();

@@ -1,9 +1,5 @@
-﻿using fiap.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using fiap.Domain.Entities;
 
 namespace fiap.Application.Interfaces
 {

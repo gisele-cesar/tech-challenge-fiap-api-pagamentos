@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AWSSDK.Core" Version="3.7.400.79" />
@@ -15,7 +16,6 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Core\fiap.Application\fiap.Application.csproj" />
     <ProjectReference Include="..\..\Core\fiap.Domain\fiap.Domain.csproj" />
-    <ProjectReference Include="..\..\Infrastructure\Data\fiap.Repositories\fiap.Repositories.csproj" />
     <ProjectReference Include="..\..\Infrastructure\Services\fiap.Services\fiap.Services.csproj" />
   </ItemGroup>
 

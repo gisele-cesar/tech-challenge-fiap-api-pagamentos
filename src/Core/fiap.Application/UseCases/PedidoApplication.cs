@@ -10,7 +10,7 @@ using Serilog;
 
 namespace fiap.Application.UseCases
 {
-    class PedidoApplication : IPedidoApplication
+    public class PedidoApplication : IPedidoApplication
     {
         private readonly ILogger _logger;
         private readonly IPedidoService _pedidoService;
