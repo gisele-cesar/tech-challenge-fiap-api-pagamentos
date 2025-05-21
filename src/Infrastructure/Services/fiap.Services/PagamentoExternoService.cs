@@ -26,7 +26,7 @@ namespace fiap.Services
 
             var pagamentoExterno = new OrdemPagamentoExterno
             {
-                external_reference = pedido.IdPedido.ToString(),
+                external_reference = pedido.IdPedido,
                 notification_url = "http://aac267167420245da82de89ad7566193-1161998588.us-east-1.elb.amazonaws.com/api/PagamentoExterno/ReceberEventoOrdemCriada",
                 expiration_date = DateTime.Now.AddMinutes(5).ToString("yyyy-MM-ddTHH:mm:ss.fffzzz"),
                 total_amount = pedido.ValorTotal,
