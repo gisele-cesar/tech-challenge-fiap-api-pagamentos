@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fiap-fase-3-service
+  name: pagamentos-service
   labels:
-    app: fiap-fase-3
+    app: pagamentos
 spec:
   selector:
-    app: fiap-fase-3 
+    app: pagamentos
   ports:
   - name: http
     port: 80
