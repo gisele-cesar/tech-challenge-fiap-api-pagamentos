@@ -55,7 +55,7 @@ namespace fiap.API.Webhooks
         /// <response code="400">If there is an error retrieving the orders.</response>
         /// <response code="500">If there is a database connection error.</response>
         [HttpPost("ReceberEventoPagamentoProcessado")]
-        public async Task<IActionResult> ReceberEventoPagamentoProcessado([FromQuery] int data_id, [FromQuery] string topic, [FromBody] dynamic content)
+        public async Task<IActionResult> ReceberEventoPagamentoProcessado([FromQuery] string data_id, [FromQuery] string topic, [FromBody] dynamic content)
         {
             _logger.Information($"Evento 'Pagamento Processado' para o pedido id: {data_id} recebido.");
 
@@ -65,7 +65,7 @@ namespace fiap.API.Webhooks
             _logger.Information($"Atualizando status pagamento pedido id: {data_id}.");
 
             // realizar chamada da API Pedidos para atualizar o status do pedido
-            await _pedidoApplication.AtualizarStatusPedido(data_id.ToString(), statusPedido, statusPagamento);
+            await _pedidoApplication.AtualizarStatusPedido(data_id, statusPedido, statusPagamento);
 
             _logger.Information($"Status pagamento pedido id: {data_id} atualizado com sucesso!");
 
