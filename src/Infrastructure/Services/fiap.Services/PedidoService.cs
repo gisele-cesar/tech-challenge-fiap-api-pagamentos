@@ -24,7 +24,7 @@ namespace fiap.Services
             {
                 var client = _httpClient.CreateClient("Pedido");
 
-                var response = await client.PutAsync($"http://a27f3383c578d40ae99fb9ceb2cb7cef-262459810.us-east-1.elb.amazonaws.com/api/Pedido/atualizar-status?idPedido={idPedido}&statusPedido={statusPedido}&statusPagamento={statusPagamento}", null);
+                var response = await client.PutAsync($"http://a27f3383c578d40ae99fb9ceb2cb7cef-262459810.us-east-1.elb.amazonaws.com/api/Pedido/AtualizarStatus?idPedido={idPedido}&statusPedido={statusPedido}&statusPagamento={statusPagamento}", null);
 
                 if (response.IsSuccessStatusCode)
                 {
