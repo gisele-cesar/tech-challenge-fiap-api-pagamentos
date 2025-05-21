@@ -19,7 +19,7 @@ namespace fiap.Tests.Service
             pedido = new Pedido
             {
                 Cliente = new Cliente { Cpf = "12345678910", Email = "teste@teste.com", Id = 1, Nome = "Joao da Silva" },
-                IdPedido = 1,
+                IdPedido = "1",
                 Numero = "123456",
                 Produtos = new List<Produto>
             {
