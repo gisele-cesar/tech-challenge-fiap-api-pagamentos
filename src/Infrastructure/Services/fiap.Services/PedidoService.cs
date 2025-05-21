@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System.Net.Http.Headers;
+using System.Net.Http.Json;
+using System.Text;
+using fiap.Domain.Entities;
+using System.Text.Json;
 using fiap.Domain.Interfaces;
 using Serilog;
 
@@ -18,10 +22,9 @@ namespace fiap.Services
         {
             try
             {
-                var client = _httpClient.CreateClient("Pedidos");
-                //var url = $"api/pedidos/atualizar-status?idPedido={Uri.EscapeDataString(idPedido)}&statusPedido={Uri.EscapeDataString(statusPedido)}&statusPagamento={Uri.EscapeDataString(statusPagamento)}";
-                var response = await client.PutAsync($"http://abf8a0373974c477c988a709a3916975-1818303021.us-east-1.elb.amazonaws.com/api/pedidos/atualizar-status?idPedido={idPedido}&statusPedido={statusPedido}&statusPagamento={statusPagamento}", null);
+                var client = _httpClient.CreateClient("Pedido");
 
+                var response = await client.PutAsync($"http://a27f3383c578d40ae99fb9ceb2cb7cef-262459810.us-east-1.elb.amazonaws.com/api/Pedido/atualizar-status?idPedido={idPedido}&statusPedido={statusPedido}&statusPagamento={statusPagamento}", null);
 
                 if (response.IsSuccessStatusCode)
                 {
