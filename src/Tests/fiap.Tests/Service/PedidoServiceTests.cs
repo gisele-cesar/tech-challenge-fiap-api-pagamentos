@@ -18,12 +18,6 @@ namespace fiap.Tests.Service
         {
             // Criando um HttpMessageHandler falso para simular a resposta HTTP
             var handlerMock = new Mock<HttpMessageHandler>(MockBehavior.Strict);
-            //handlerMock
-            //    .SetupSequence(m => m.Send(It.IsAny<HttpRequestMessage>()))
-            //    .Returns(new HttpResponseMessage
-            //    {
-            //        StatusCode = HttpStatusCode.OK
-            //    });
 
             handlerMock.Protected()
                .Setup<Task<HttpResponseMessage>>(
@@ -67,7 +61,7 @@ namespace fiap.Tests.Service
 
             var httpClient = new HttpClient(handlerMock.Object);
             var httpClientFactoryMock = new Mock<IHttpClientFactory>();
-            httpClientFactoryMock.Setup(_ => _.CreateClient("Pedidos")).Returns(httpClient);
+            httpClientFactoryMock.Setup(_ => _.CreateClient("Pedido")).Returns(httpClient);
 
             var loggerMock = new Mock<ILogger>();
             var service = new PedidoService(httpClientFactoryMock.Object, loggerMock.Object);
