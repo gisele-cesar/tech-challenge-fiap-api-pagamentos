@@ -5,7 +5,7 @@ namespace fiap.Domain.Entities
 {
     public class Pedido
     {
-        public int IdPedido { get; set; }
+        public string IdPedido { get; set; }
         public Cliente Cliente { get; set; }
         public string Numero { get; set; }
         public string StatusPedido { get; set; }
