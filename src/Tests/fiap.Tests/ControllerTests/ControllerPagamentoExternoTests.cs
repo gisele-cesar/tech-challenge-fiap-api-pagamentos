@@ -69,7 +69,7 @@ namespace fiap.Tests.ControllerTests
 
             var controller = new PagamentoExternoController(logger.Object, pagamentoApplication.Object, pedidoApplication.Object);
 
-            var result = await controller.ReceberEventoPagamentoProcessado(1, "topic", new { });
+            var result = await controller.ReceberEventoPagamentoProcessado("1", "topic", new { });
 
             Assert.IsType<OkResult>(result);
         }
