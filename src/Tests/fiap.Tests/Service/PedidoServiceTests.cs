@@ -39,7 +39,7 @@ namespace fiap.Tests.Service
 
             var httpClient = new HttpClient(handlerMock.Object);
             var httpClientFactoryMock = new Mock<IHttpClientFactory>();
-            httpClientFactoryMock.Setup(_ => _.CreateClient("Pedidos")).Returns(httpClient);
+            httpClientFactoryMock.Setup(_ => _.CreateClient("Pedido")).Returns(httpClient);
 
             var loggerMock = new Mock<ILogger>();
             var service = new PedidoService(httpClientFactoryMock.Object, loggerMock.Object);
