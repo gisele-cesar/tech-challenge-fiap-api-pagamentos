@@ -19,8 +19,6 @@ namespace fiap.Application.UseCases
 
         public async Task<bool> CriarOrdemPagamento(Pedido pedido)
         {
-            //_logger.Information($"Buscando pedido id: {idPedido} para criar ordem de pagamento no MP.");
-            //var pedido = await _pedidoApplication.ObterPedido(idPedido);
 
             _logger.Information($"Criando ordem de pagamento no MP para o pedido id: {pedido.IdPedido}.");
             return await _pagamentoExternoService.CriarOrdemPagamentoExterno(pedido);
